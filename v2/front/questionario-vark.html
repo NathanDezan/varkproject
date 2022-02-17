@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Kross - Creative Portfolio Template</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Kross Template v1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  
+
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo2.png" alt="Myself"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <div class="menu-drop">
+          <button type="button" name="drop">Questionários</button>
+          <div class="drop-content">
+            <a href="questionario.html">VARK</a>
+            <a href="#">CHAEA</a>
+          </div>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="vark.html">Vark</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="chaea.html">Chaea</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- page title -->
+<section class="page-title-vark bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<section class="section">
+  <div class="container">
+    <div class="container">
+      <h3 class="card-title">Questionário VARK</h3>
+    </div>
+    <div class="container">
+      <h5 class="card-title">Traduzido por <a class="text-dark" href="https://www.linkedin.com/in/fernanda-nakamoto-801bb113b/?originalSubdomain=br" target="_blank">Fernanda Nakamoto</a>, São Camilo University Center - 2021 - Vark versão 8.01<br><br></h5>
+    </div>
+    <div class="container">
+      <form>
+        <!-- Questão 1 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero montar uma mesa de madeira que veio em partes. Eu aprenderia melhor a partir de:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Assistindo a um vídeo de uma pessoa montando uma mesa similar.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Instruções escritas que vieram com as partes da mesa.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Conselhos de alguém que já montou antes.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Diagramas mostrando cada estágio da montagem.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 2 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Terminei uma competição ou prova e gostaria de ter um feedback. Gostaria que este feedback:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Tivesse utilização de gráficos mostrando o que eu alcancei.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Tivesse a utilização de exemplos do que eu fiz.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Tivesse a utilização de descrição escrita dos meus resultados.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Viesse de alguém que o discuta comigo.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 3 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero aprender sobre um novo projeto. Eu pediria por:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Exemplos de onde o projeto foi utilizado com sucesso.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Uma oportunidade de discutir o projeto.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Um relatório escrito descrevendo as características principais do projeto.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Diagramas que mostrem os estágios do projeto com gráficos de benefícios e custos.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 4 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu prefiro um apresentador ou um professor que utilize:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Diagramas, gráficos ou mapas.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Pergunta e resposta, conversa, discussão em grupo ou convidados para falar.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Folhetos, livros ou material de leitura.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Demonstrações, modelos ou sessões práticas.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 5 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Um website tem um vídeo mostrando como fazer um gráfico especial. Existe um pessoa falando, algumas listas e palavras descrevendo o que fazer e alguns diagramas. Eu aprenderia melhor:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Olhando os diagramas.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Assistindo as ações.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Lendo as palavras.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Ouvindo.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 6 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu tenho um problema com o meu coração. Eu preferiria que o médico:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Descrevesse o que está errado.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Me mostrasse um diagrama sobre o que está errado.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Me desse algo para ler para explicar o que está errado.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Utilizasse um modelo de plástico para mostrar o que está errado.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 7 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero aprender como jogar um novo jogo de tabuleiro ou um jogo de cartas. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Leria as instruções.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Assistiria outras pessoas jogando antes de entrar no jogo.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Usaria os diagramas que explicam os vários estágios, movimentos e estratégias no jogo.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Ouviria alguém explicando e faria perguntas.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 8 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Ao escolher uma carreira ou área de estudo, são importantes para mim:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Comunicação com outros através de discussão.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Aplicação do meu conhecimento em situações reais.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Boa utilização de palavras na comunicação escrita.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Trabalho com desenhos, mapas e gráficos.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 9 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Quando eu estou aprendendo eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Uso exemplos e aplicações.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Vejo padrões nas coisas.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Gosto de discutir as coisas.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Leio livros, artigos e folhetos.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 10 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero aprender como tirar fotografias melhores. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Faria perguntas e conversaria sobre a câmera e suas características.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Utilizaria exemplos de fotografias boas e ruins mostrando como melhorá-las.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Utilizaria as instruções escritas sobre o que fazer.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Utilizaria diagramas que mostram a câmera e o que cada parte faz.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 11 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero descobrir mais sobre um passeio que vou fazer. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Conversaria com a pessoa que planejou o passeio ou com outros que irão ao passeio.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Leria sobre o passeio no roteiro.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Usaria um mapa e veria onde são os lugares.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Examinaria detalhes sobre os pontos altos e atividades do passeio.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 12 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Preciso encontrar o caminho para uma loja recomendada por um amigo. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Anotaria as informações sobre as ruas que preciso para lembrar.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Usaria um mapa.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Pediria ao meu amigo as informações sobre como chegar.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Descobriria a localização da loja em relação a um local que conheço.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 13 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero guardar mais dinheiro e decidir dentre uma variedade de opções. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Conversaria com um especialista sobre as opções.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Consideraria exemplos de cada opção utilizando minhas informações financeiras.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Leria um catálogo impresso que descreve as opções em detalhe.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Usaria gráficos mostrando diferentes opções para diferentes períodos de tempo.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 14 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Quando estou aprendendo na internet eu gosto de:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Descrições escritas interessantes, listas e explicações.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Vídeos mostrando como fazer as coisas.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Desenhos interessantes e características visuais.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Canais de áudio em que eu posso ouvir podcasts ou entrevistas.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 15 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero saber mais sobre uma casa ou um apartamento. Antes de visitá-la(o) eu gostaria de:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Assistir a um vídeo da propriedade.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Ter uma descrição impressa dos cômodos e suas características.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Ter uma discussão com o proprietário.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Uma planta mostrando os cômodos e um mapa da área.<br><br>
+            </label>
+          </div>
+        </div>
+        <!-- Questão 16 -->
+        <div class="VARKQuestion">
+          <div class="VARKQuestionText"><b>Eu quero aprender a fazer algo novo no computador. Eu:</b><br><br></div>
+          <div class="VARKResponse">
+            <label for="C16K">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+              Conversaria com pessoas que sabem sobre este programa.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16R">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16R" name="C16R" value="R" title="Instruções escritas que vieram com as partes da mesa." onclick="sw_vark_option_clicked( this );">
+              Seguiria os diagramas de um livro.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16A">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16A" name="C16A" value="A" title="Conselhos de alguém que já montou antes." onclick="sw_vark_option_clicked( this );">
+              Começaria utilizando-o e aprendendo por tentativa e erro.
+            </label>
+          </div>
+          <div class="VARKResponse">
+            <label for="C16V">
+              <input type="checkbox" class="VARKResponseCheckbox" id="C16V" name="C16V" value="V" title="Diagramas mostrando cada estágio da montagem." onclick="sw_vark_option_clicked( this );">
+              Leria as instruções escritas que vieram com o programa.<br><br>
+            </label>
+          </div>
+        </div>
+    </div>
+    <div class="container">
+      <p>
+        <input type="hidden" name="submitted" id="submitted" value="true">
+        <a class="btn btn-xs btn-primary">Enviar</a>
+      </p>
+    </div>
+    </form>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-dark footer-section">
+  <div class="border-top text-center border-dark py-5">
+    <p class="mb-0 text-light">Copyright &copy;<script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> Designed &amp; Developed by <a class="text-white-50" href="https://themefisher.com/">Themefisher</a></p>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

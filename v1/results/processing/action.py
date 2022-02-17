@@ -19,15 +19,15 @@ df_test['E-mail'] = df_emails['E-mail']
 df_test['v-a-r-k'] = list_vark
 df_test['Learning'] = result_vark
 
-print(df_test)
+print(df_test.head())
 #print(df_results)
 
 #Insights gerados a partir dos dados
 
-# #Quantidade de pessoas por aprendizagem
-# fig = plt.figure()
-# ax = fig.add_axes([0,0,1,1])
-# vark = ['v', 'a', 'r', 'k']
-# vark_qtd = [4, 8, 1, 2]
-# ax.bar(vark, vark_qtd)
-# plt.show()
+#Quantidade de pessoas por aprendizagem
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+vark = ['v', 'a', 'r', 'k']
+vark_qtd = [4, 8, 1, 2]
+ax.bar(vark, vark_qtd)
+plt.show()
