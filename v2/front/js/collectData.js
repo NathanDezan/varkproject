@@ -8,7 +8,7 @@ var responses = {
 13:{C13K: false, C13A: false, C13R: false, C13V: false}, 14: {C14K: false, C14R: false, C14A: false, C14V: false},
 15:{C15K: false, C15A: false, C15R: false, C15V: false}, 16: {C16V: false, C16A: false, C16R: false, C16K: false}};
 
-var information = {INFORMACOES: {NOME: "", IDADE: "", GENERO: "", RGA: "", EMAIL: "", MATERIA: "", FUNÇÃO: ""}}
+var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: ""};
 
 function collectResponses(component){
     var nameObject = component.getAttribute("name");
@@ -355,8 +355,9 @@ function calcuteResult(resp){
         }
     }
     console.log(countVARK);
-
-    axios.post('/result', responses).then((response) => {
+    
+    var contentVARK = {Information: informationForm, Responses: responses, Result: countVARK};
+    axios.post('/result', contentVARK).then((response) => {
         setTimeout(redirectResult, 2000);
     }).catch((error) => {
         console.log(error);
