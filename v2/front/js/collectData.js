@@ -8,6 +8,8 @@ var responses = {
 13:{C13K: false, C13A: false, C13R: false, C13V: false}, 14: {C14K: false, C14R: false, C14A: false, C14V: false},
 15:{C15K: false, C15A: false, C15R: false, C15V: false}, 16: {C16V: false, C16A: false, C16R: false, C16K: false}};
 
+var information = {INFORMACOES: {NOME: "", IDADE: "", GENERO: "", RGA: "", EMAIL: "", MATERIA: "", FUNÇÃO: ""}}
+
 function collectResponses(component){
     var nameObject = component.getAttribute("name");
     var nameString = String(nameObject);
@@ -304,7 +306,6 @@ function C16(nameString){
 
 function sendResult(){
     var empty = true;
-
     for(var item in responses){
         for(var sub_item in responses[item]){
             if(empty == true && responses[item][sub_item] == true){
