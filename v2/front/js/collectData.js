@@ -303,5 +303,62 @@ function C16(nameString){
 }
 
 function sendResult(){
-    console.log(responses);
+    var empty = true;
+
+    for(var item in responses){
+        for(var sub_item in responses[item]){
+            if(empty == true && responses[item][sub_item] == true){
+                empty = false;
+            }
+        }
+    }
+        
+    if(empty == true){
+        resultEmpty();
+    }else{
+        calcuteResult(responses);
+    }
+}
+
+function bdConnect(data){
+    const uri = "mongodb+srv://dezan:amLxIGFha3zPHR7b@cluster0.w4els.mongodb.net/varkproject?retryWrites=true&w=majority";
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+    client.connect(err => {
+        const collection = client.db("varkproject").collection("results");
+    });
+
+    bdSave(collection, data);
+    client.close();
+}
+
+function bdSave(collection, data){
+    collection.insertOne(data);
+}
+
+function resultEmpty(){
+    var element = document.getElementById("empty-form");
+    element.textContent = "O formulário não pode estar em branco!";
+}
+
+function calcuteResult(resp){
+    var countVARK = {V: 0, A: 0, R: 0, K: 0};
+
+    for(var item in resp){
+        for(var sub_item in resp[item]){
+            var itemString = String(sub_item);
+            if(itemString.includes("V") == true && responses[item][sub_item] == true){
+                countVARK.V++;
+            }
+            if(itemString.includes("A") == true && responses[item][sub_item] == true){
+                countVARK.A++;
+            }
+            if(itemString.includes("R") == true && responses[item][sub_item] == true){
+                countVARK.R++;
+            }
+            if(itemString.includes("K") == true && responses[item][sub_item] == true){
+                countVARK.K++;
+            }
+        }
+    }
+    console.log(countVARK);
 }

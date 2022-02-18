@@ -890,3 +890,12 @@ button[name="drop"]{
   filter: brightness(74%);
   text-align: left;
 }
+
+.correction{
+  display: inline-block;
+}
+
+.correction-2{
+  display: inline-block;
+  margin-left: 1em;
+}
