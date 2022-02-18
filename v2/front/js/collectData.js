@@ -10,6 +10,8 @@ var responses = {
 
 var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: ""};
 
+var countVARK = {V: 0, A: 0, R: 0, K: 0};
+
 function collectResponses(component){
     var nameObject = component.getAttribute("name");
     var nameString = String(nameObject);
@@ -322,7 +324,6 @@ function sendResult(){
     }
 }
 
-
 function resultEmpty(){
     var element = document.getElementById("empty-form");
     element.textContent = "O formulário não pode estar em branco!";
@@ -334,8 +335,6 @@ function awaitResult(){
 }
 
 function calcuteResult(resp){
-    var countVARK = {V: 0, A: 0, R: 0, K: 0};
-    var learnings = ["Visual", "Auditivo", "Leitor/Escritor", "Cinestésico", "Multimodal"];
 
     for(var item in resp){
         for(var sub_item in resp[item]){
@@ -355,7 +354,7 @@ function calcuteResult(resp){
         }
     }
     console.log(countVARK);
-    
+
     var contentVARK = {Information: informationForm, Responses: responses, Result: countVARK};
     axios.post('/result', contentVARK).then((response) => {
         setTimeout(redirectResult, 2000);
@@ -365,5 +364,68 @@ function calcuteResult(resp){
 }
 
 function redirectResult(){
-    window.location.replace('result.html');
+    //window.location.replace('questionario-vark.html');
+    typeLearning();
+}
+
+function typeLearning(){
+    var learnings = ["Visual", "Auditivo", "Leitor/Escritor", "Cinestésico", "Multimodal"];
+    var bigValue = -1;
+    var letterValue = "";
+    var triggerMulti = false;
+
+    for(var item in countVARK){
+        if(countVARK[item] > bigValue){
+            bigValue = countVARK[item];
+            letterValue = item;
+        }
+        if(countVARK[item] == bigValue){
+            triggerMulti = true;
+        }
+    }
+
+    if(triggerMulti == true){
+        
+    }else if(letterValue == "V"){
+        visualVARK();
+    }else if(letterValue == "A"){
+        auralVARK();
+    }else if(letterValue == "R"){
+        readwriteVARK();
+    }else if(letterValue == "K"){
+        kinesteticVARK();
+    }
+}
+
+
+function visualVARK(){
+    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Visual!</h3></div>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "</h5></div>";
+
+    document.getElementById("div-external").innerHTML = string;
+}
+
+function auralVARK(){
+    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Auditivo!</h3></div>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "</h5></div>";
+
+    document.getElementById("div-external").innerHTML = string;
+}
+
+function readwriteVARK(){
+    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é de Leitura/Escrita!</h3></div>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "</h5></div>";
+
+    document.getElementById("div-external").innerHTML = string;
+}
+
+function kinesteticVARK(){
+    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Cinestésica!</h3></div>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "</h5></div>";
+
+    document.getElementById("div-external").innerHTML = string;
 }
