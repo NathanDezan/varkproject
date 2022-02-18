@@ -316,32 +316,25 @@ function sendResult(){
     if(empty == true){
         resultEmpty();
     }else{
+        awaitResult();
         calcuteResult(responses);
     }
 }
 
-function bdConnect(data){
-    const uri = "mongodb+srv://dezan:amLxIGFha3zPHR7b@cluster0.w4els.mongodb.net/varkproject?retryWrites=true&w=majority";
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-    client.connect(err => {
-        const collection = client.db("varkproject").collection("results");
-    });
-
-    bdSave(collection, data);
-    client.close();
-}
-
-function bdSave(collection, data){
-    collection.insertOne(data);
-}
 
 function resultEmpty(){
     var element = document.getElementById("empty-form");
     element.textContent = "O formulário não pode estar em branco!";
 }
 
+function awaitResult(){
+    var element = document.getElementById("empty-form");
+    element.textContent = "Aguarde um momento!";
+}
+
 function calcuteResult(resp){
     var countVARK = {V: 0, A: 0, R: 0, K: 0};
+    var learnings = ["Visual", "Auditivo", "Leitor/Escritor", "Cinestésico", "Multimodal"];
 
     for(var item in resp){
         for(var sub_item in resp[item]){
@@ -361,4 +354,14 @@ function calcuteResult(resp){
         }
     }
     console.log(countVARK);
+
+    axios.post('/result', responses).then((response) => {
+        setTimeout(redirectResult, 2000);
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function redirectResult(){
+    window.location.replace('result.html');
 }
