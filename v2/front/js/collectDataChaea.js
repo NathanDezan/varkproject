@@ -178,7 +178,7 @@ function activeCHAEA(){
 }
 
 function reflexiveCHAEA(){
-    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Reflexico!</h3></div>" +
+    var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Reflexivo!</h3></div>" +
     "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 

@@ -421,8 +421,7 @@ function typeLearning(){
         if(countVARK[item] > bigValue){
             bigValue = countVARK[item];
             letterValue = item;
-        }
-        if(countVARK[item] == bigValue && countVARK[item] != 0){
+        }else if(countVARK[item] == bigValue && countVARK[item] != 0 && bigValue != 0){
             triggerMulti = true;
         }
     }
