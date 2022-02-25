@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Kross - Creative Portfolio Template</title>
+  <title>Projeto VARK</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -24,10 +24,8 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- themefy-icon -->
   <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-
 </head>
 <body>
   
@@ -45,8 +43,8 @@
         <div class="menu-drop">
           <button type="button" name="drop">Questionários</button>
           <div class="drop-content">
-            <a href="questionario.html">VARK</a>
-            <a href="#">CHAEA</a>
+            <a href="questionario-vark.html">VARK</a>
+            <a href="questionario-chaea.html">CHAEA</a>
           </div>
         </div>
         <li class="nav-item">
@@ -80,6 +78,41 @@
     <div class="container">
       <h5 class="card-title" id="learning-descript">Traduzido por <a class="text-dark" href="https://www.linkedin.com/in/fernanda-nakamoto-801bb113b/?originalSubdomain=br" target="_blank">Fernanda Nakamoto</a>, São Camilo University Center - 2021 - Vark versão 8.01<br><br></h5>
     </div>
+    <div class="container">
+      <form action="">
+        <label class="space-checkbox">Nome Completo: </label><input type="text" id="name" name="name" placeholder="Seu nome..">
+        <label class="space-input space-checkbox">RGA: </label><input type="text" id="rga" name="rga" placeholder="Seu RGA..">
+        <br>
+        <label class="space-checkbox">E-mail: </label><input type="email" id="email" name="email" placeholder="Seu email..">
+        <label class="space-input space-checkbox">Idade: </label><input type="number" id="age" name="age" placeholder="Sua idade..">
+
+        <label class="space-input space-checkbox">Gênero: </label>
+        <select id="gen" name="gen">
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <br>
+
+        <label class="space-checkbox">Materia: </label>
+        <select id="materia" name="materia">
+          <option value="APSOO">APSOO</option>
+          <option value="Gestão de Projetos">Gestão de Projetos</option>
+        </select>
+
+        <br>
+        <label>Função: </label>
+        <div class="container">
+          <label class="space-checkbox"><input type="checkbox" id="G" name="G" value="Gerente de Projetos" onclick="groupGAPT( this )"> Gerente de Projetos</label>
+          <label class="space-checkbox"><input type="checkbox" id="A" name="A" value="Analista de Sistema" onclick="groupGAPT( this )"> Analista de Sistema</label>
+          <label class="space-checkbox"><input type="checkbox" id="P" name="P" value="Programador" onclick="groupGAPT( this )"> Programador</label>
+          <label class="space-checkbox"><input type="checkbox" id="T" name="T" value="Testador" onclick="groupGAPT( this )"> Testador</label>
+        </div>
+
+        <br>
+      </form>
+    </div>
+
     <div class="container" id="delsection">
       <form>
         <!-- Questão 01 -->
@@ -370,10 +403,7 @@
 <!-- footer -->
 <footer class="bg-dark footer-section">
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
-        var CurrentYear = new Date().getFullYear()
-        document.write(CurrentYear)
-      </script> Designed &amp; Developed by <a class="text-white-50" href="https://themefisher.com/">Themefisher</a></p>
+    <p class="mb-0 text-light"></p>
   </div>
 </footer>
 <!-- /footer -->

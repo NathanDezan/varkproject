@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Kross - Creative Portfolio Template</title>
+  <title>Projeto VARK</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -45,8 +45,8 @@
         <div class="menu-drop">
           <button type="button" name="drop">Questionários</button>
           <div class="drop-content">
-            <a href="questionario.html">VARK</a>
-            <a href="#">CHAEA</a>
+            <a href="questionario-vark.html">VARK</a>
+            <a href="questionario-chaea.html">CHAEA</a>
           </div>
         </div>
         <li class="nav-item">
@@ -73,741 +73,737 @@
 <!-- /page title -->
 
 <section class="section">
-  <div class="container">
+  <div class="container" id="div-external">
     <div class="container">
       <h3 class="card-title">Questionário CHAEA</h3>
     </div>
     <div class="container">
       <h5 class="card-title">Autores: Catalina M. Alonso, Domingo J. Gallego e Peter Honey<br>Tradução e adaptação: Evelise Maria Labatut Portilho.<br><br></h5>
     </div>
+
+    <div class="container">
+        <form action="">
+            <label class="space-checkbox">Nome Completo: </label><input type="text" id="name" name="name" placeholder="Seu nome..">
+            <label class="space-input space-checkbox">RGA: </label><input type="text" id="rga" name="rga" placeholder="Seu RGA..">
+            <br>
+            <label class="space-checkbox">E-mail: </label><input type="email" id="email" name="email" placeholder="Seu email..">
+            <label class="space-input space-checkbox">Idade: </label><input type="number" id="age" name="age" placeholder="Sua idade..">
+
+            <label class="space-input space-checkbox">Gênero: </label>
+            <select id="gen" name="gen">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+            </select>
+            <br>
+
+            <label class="space-checkbox">Materia: </label>
+            <select id="materia" name="materia">
+            <option value="APSOO">APSOO</option>
+            <option value="Gestão de Projetos">Gestão de Projetos</option>
+            </select>
+
+            <br>
+            <label>Função: </label>
+            <div class="container">
+            <label class="space-checkbox"><input type="checkbox" id="G" name="G" value="Gerente de Projetos" onclick="groupGAPT( this )"> Gerente de Projetos</label>
+            <label class="space-checkbox"><input type="checkbox" id="A" name="A" value="Analista de Sistema" onclick="groupGAPT( this )"> Analista de Sistema</label>
+            <label class="space-checkbox"><input type="checkbox" id="P" name="P" value="Programador" onclick="groupGAPT( this )"> Programador</label>
+            <label class="space-checkbox"><input type="checkbox" id="T" name="T" value="Testador" onclick="groupGAPT( this )"> Testador</label>
+            </div>
+
+            <br>
+        </form>
+    </div>
+
     <div class="container">
       <form>
         <!-- Questão 1 -->
-        <div class="VARKQuestion">
-          <div class="VARKResponse">
-            <label for="C16K">
-                <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                Tenho fama de dizer o que penso claramente e sem rodeios.
-            </label>
+        <div class="CHAEAQuestion">
+          <div class="CHAEAResponse">
+            <label for="R01"><input type="checkbox" class="VARKResponseCheckbox" id="1" name="1" value="T" onclick="collectResponses( this );"> Tenho fama de dizer o que penso claramente e sem rodeios.</label>
           </div>
         </div>
+
         <!-- Questão 2 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Estou seguro (a) do que é bom e do que é mau, do que está bem e do que está mal.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R02"><input type="checkbox" class="VARKResponseCheckbox" id="2" name="2" value="T" onclick="collectResponses( this );"> Estou seguro (a) do que é bom e do que é mau, do que está bem e do que está mal.</label>
             </div>
         </div>
+
         <!-- Questão 3 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Muitas vezes faço, sem olhar as consequências.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R03"><input type="checkbox" class="VARKResponseCheckbox" id="3" name="3" value="T" onclick="collectResponses( this );"> Muitas vezes faço, sem olhar as consequências.</label>
             </div>
         </div>
+
         <!-- Questão 4 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Normalmente, resolvo os problemas metodicamente e passo a passo.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R04"><input type="checkbox" class="VARKResponseCheckbox" id="4" name="4" value="T" onclick="collectResponses( this );"> Normalmente, resolvo os problemas metodicamente e passo a passo.</label>
             </div>
         </div>
+
         <!-- Questão 5 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Creio que a formalidade corta e limita a atuação espontânea das pessoas.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R05"><input type="checkbox" class="VARKResponseCheckbox" id="5" name="5" value="T" onclick="collectResponses( this );"> Creio que a formalidade corta e limita a atuação espontânea das pessoas.</label>
             </div>
         </div>
+
         <!-- Questão 6 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Interessa-me saber quais são os sistemas de valores dos outros e com que critérios atuam.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R06"><input type="checkbox" class="VARKResponseCheckbox" id="6" name="6" value="T" onclick="collectResponses( this );"> Interessa-me saber quais são os sistemas de valores dos outros e com que critérios atuam.</label>
             </div>
         </div>
+
         <!-- Questão 7 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Penso que agir intuitivamente pode ser sempre tão válido como atuar reflexivamente.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R07"><input type="checkbox" class="VARKResponseCheckbox" id="7" name="7" value="T" onclick="collectResponses( this );"> Penso que agir intuitivamente pode ser sempre tão válido como atuar reflexivamente.</label>
             </div>
         </div>
+
         <!-- Questão 8 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Creio que o mais importante é que as coisas funcionem.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R08"><input type="checkbox" class="VARKResponseCheckbox" id="8" name="8" value="T" onclick="collectResponses( this );"> Creio que o mais importante é que as coisas funcionem.</label>
             </div>
         </div>
+
         <!-- Questão 9 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Procuro estar atento (a) ao que acontece aqui e agora.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R09"><input type="checkbox" class="VARKResponseCheckbox" id="9" name="9" value="T" onclick="collectResponses( this );"> Procuro estar atento (a) ao que acontece aqui e agora.</label>
             </div>
         </div>
+
         <!-- Questão 10 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Agrada-me quando tenho tempo para preparar meu trabalho e realizá-lo com consciência.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R10"><input type="checkbox" class="VARKResponseCheckbox" id="10" name="10" value="T" onclick="collectResponses( this );"> Agrada-me quando tenho tempo para preparar meu trabalho e realizá-lo com consciência.</label>
             </div>
         </div>
+
         <!-- Questão 11 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Estou seguindo, porque quero, uma ordem na alimentação, no estudo, fazendo exercícios regularmente.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R11"><input type="checkbox" class="VARKResponseCheckbox" id="11" name="11" value="T" onclick="collectResponses( this );"> Estou seguindo, porque quero, uma ordem na alimentação, no estudo, fazendo exercícios regularmente.</label>
             </div>
         </div>
+
         <!-- Questão 12 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Quando escuto uma nova ideia, em seguida, começo a pensar como colocá-la em prática.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="12"><input type="checkbox" class="VARKResponseCheckbox" id="12" name="12" value="T" onclick="collectResponses( this );"> Quando escuto uma nova ideia, em seguida, começo a pensar como colocá-la em prática.</label>
             </div>
         </div>
+
         <!-- Questão 13 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Prefiro as ideias originais e novas mesmo que não sejam práticas.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R13"><input type="checkbox" class="VARKResponseCheckbox" id="13" name="13" value="T" onclick="collectResponses( this );"> Prefiro as ideias originais e novas mesmo que não sejam práticas.</label>
             </div>
         </div>
+
         <!-- Questão 14 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Admito e me ajusto às normas somente se servem para atingir meus objetivos.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R14">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="14" name="14" value="T" onclick="collectResponses( this );"> Admito e me ajusto às normas somente se servem para atingir meus objetivos.</label>
             </div>
         </div>
+
         <!-- Questão 15 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Normalmente me dou bem com pessoas reflexivas, e me custa sintonizar com pessoas demasiadamente espontâneas e imprevisíveis.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R15"><input type="checkbox" class="VARKResponseCheckbox" id="15" name="15" value="T" onclick="collectResponses( this );"> Normalmente me dou bem com pessoas reflexivas, e me custa sintonizar com pessoas demasiadamente espontâneas e imprevisíveis.</label>
             </div>
         </div>
+
         <!-- Questão 16 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Escuto com mais frequência do que falo.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R16"><input type="checkbox" class="VARKResponseCheckbox" id="16" name="16" value="T" onclick="collectResponses( this );"> Escuto com mais frequência do que falo.</label>
             </div>
         </div>
+
         <!-- Questão 17 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Prefiro as coisas estruturadas do que as desordenadas.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R17"><input type="checkbox" class="VARKResponseCheckbox" id="17" name="17" value="T" onclick="collectResponses( this );"> Prefiro as coisas estruturadas do que as desordenadas.</label>
             </div>
         </div>
+
         <!-- Questão 18 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Quando possuo qualquer informação, trato de interpretá-la bem antes de manifestar alguma conclusão.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R18"><input type="checkbox" class="VARKResponseCheckbox" id="18" name="18" value="T" onclick="collectResponses( this );"> Quando possuo qualquer informação, trato de interpretá-la bem antes de manifestar alguma conclusão.</label>
             </div>
         </div>
+
         <!-- Questão 19 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Antes de fazer algo, estudo com cuidado suas vantagens e inconvenientes.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R19"><input type="checkbox" class="VARKResponseCheckbox" id="19" name="19" value="T" onclick="collectResponses( this );"> Antes de fazer algo, estudo com cuidado suas vantagens e inconvenientes.</label>
             </div>
         </div>
+
         <!-- Questão 20 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Estimula-me o fato de fazer algo novo e diferente.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R20"><input type="checkbox" class="VARKResponseCheckbox" id="20" name="20" value="T" onclick="collectResponses( this );"> Estimula-me o fato de fazer algo novo e diferente.</label>
             </div>
         </div>
+
         <!-- Questão 21 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
-                    Quase sempre procuro ser coerente com meus critérios e escala de valores. Tenho princípios e os sigo.
-                </label>
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R21"><input type="checkbox" class="VARKResponseCheckbox" id="21" name="21" value="T" onclick="collectResponses( this );"> Quase sempre procuro ser coerente com meus critérios e escala de valores. Tenho princípios e os sigo.</label>
             </div>
         </div>
+        
         <!-- Questão 22 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R22">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="22" name="22" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Em uma discussão, não gosto de rodeios.
                 </label>
             </div>
         </div>
         <!-- Questão 23 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R23">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="23" name="23" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Não me agrada envolvimento afetivo no ambiente de trabalho. Prefiro manter relações distantes.
                 </label>
             </div>
         </div>
         <!-- Questão 24 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R24">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="24" name="24" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto mais das pessoas realistas e concretas do que as teóricas.
                 </label>
             </div>
         </div>
         <!-- Questão 25 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R25">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="25" name="25" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     É difícil ser criativo (a) e romper estruturas.
                 </label>
             </div>
         </div>
         <!-- Questão 26 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R26">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="26" name="26" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de estar perto de pessoas espontâneas e divertidas.
                 </label>
             </div>
         </div>
         <!-- Questão 27 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R27">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="27" name="27" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     A maioria das vezes expresso abertamente como me sinto.
                 </label>
             </div>
         </div>
         <!-- Questão 28 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R28">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="28" name="28" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de analisar e esmiuçar as coisas.
                 </label>
             </div>
         </div>
         <!-- Questão 29 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R29">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="29" name="29" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Incomoda-me o fato das pessoas não tomarem as coisas a sério.
                 </label>
             </div>
         </div>
         <!-- Questão 30 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R30">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="30" name="30" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Atrai-me experimentar e praticar as últimas técnicas e novidades.
                 </label>
             </div>
         </div>
         <!-- Questão 31 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R31">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="31" name="31" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Sou cauteloso (a) na hora de tirar conclusões.
                 </label>
             </div>
         </div>
         <!-- Questão 32 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R32">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="32" name="32" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Prefiro contar com o maior número de fontes de informação. Quanto mais dados tiver reunido para refletir, melhor.
                 </label>
             </div>
         </div>
         <!-- Questão 33 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R33">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="33" name="33" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Tenho tendência a ser perfeccionista.
                 </label>
             </div>
         </div>
         <!-- Questão 34 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R34">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="34" name="34" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Prefiro ouvir a opinião dos outros antes de expor a minha.
                 </label>
             </div>
         </div>
         <!-- Questão 35 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R35">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="35" name="35" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de levar a vida espontaneamente e não ter que planejá-la.
                 </label>
             </div>
         </div>
         <!-- Questão 36 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R36">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="36" name="36" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Nas discussões gosto de observar como atuam os outros participantes.
                 </label>
             </div>
         </div>
         <!-- Questão 37 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R37">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="37" name="37" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Sinto-me incomodado (a) com as pessoas caladas e demasiadamente analíticas.
                 </label>
             </div>
         </div>
         <!-- Questão 38 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="R38">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="38" name="38" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Julgo com frequência as ideias dos outros, por seu valor prático.
                 </label>
             </div>
         </div>
         <!-- Questão 39 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="39">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="39" name="39" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Angustio-me se me obrigam a acelerar muito o trabalho para cumprir um prazo.
                 </label>
             </div>
         </div>
         <!-- Questão 40 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="40">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="40" name="40" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Nas reuniões apoio as ideias práticas e realistas.
                 </label>
             </div>
         </div>
         <!-- Questão 41 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="41">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="41" name="41" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     É melhor aproveitar o momento presente do que deleitar-se pensando no passado ou no futuro.
                 </label>
             </div>
         </div>
         <!-- Questão 42 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="42">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="42" name="42" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Incomodam-me as pessoas que sempre desejam apressar as coisas.
                 </label>
             </div>
         </div>
         <!-- Questão 43 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="43">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="43" name="43" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Apoio ideias novas e espontâneas nos grupos de discussão.
                 </label>
             </div>
         </div>
         <!-- Questão 44 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="44">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="44" name="44" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Penso que são mais consistentes as decisões fundamentadas em uma minuciosa análise do que as baseadas na intuição.
                 </label>
             </div>
         </div>
         <!-- Questão 45 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="45">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="45" name="45" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Detecto frequentemente a inconsistência e os pontos frágeis nas argumentações dos outros.
                 </label>
             </div>
         </div>
         <!-- Questão 46 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="46">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="46" name="46" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Creio que é preciso transpor as normas muito mais vezes do que as cumprir.
                 </label>
             </div>
         </div>
         <!-- Questão 47 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="47">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="47" name="47" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Frequentemente, percebo outras formas melhores e mais práticas de fazer as coisas.
                 </label>
             </div>
         </div>
         <!-- Questão 48 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="48">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="48" name="48" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     No geral, falo mais do que escuto.
                 </label>
             </div>
         </div>
         <!-- Questão 49 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="49">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="49" name="49" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Prefiro distanciar-me dos fatos e observá-los a partir de outras perspectivas.
                 </label>
             </div>
         </div>
         <!-- Questão 50 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="50">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="50" name="50" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Estou convencido (a) de que deve impor-se a lógica e a razão.
                 </label>
             </div>
         </div>
         <!-- Questão 51 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="51">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="51" name="51" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de buscar novas experiências.
                 </label>
             </div>
         </div>
         <!-- Questão 52 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="52">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="52" name="52" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de experimentar e aplicar as coisas.
                 </label>
             </div>
         </div>
         <!-- Questão 53 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="53">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="53" name="53" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Penso que devemos chegar logo ao âmago, ao centro das questões.
                 </label>
             </div>
         </div>
         <!-- Questão 54 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="54">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="54" name="54" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Procuro sempre chegar a conclusões e ideias claras.
                 </label>
             </div>
         </div>
         <!-- Questão 55 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="55">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="55" name="55" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Prefiro discutir questões concretas e não perder tempo com falas vazias.
                 </label>
             </div>
         </div>
         <!-- Questão 56 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="56">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="56" name="56" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Incomodo-me quando dão explicações irrelevantes e incoerentes.
                 </label>
             </div>
         </div>
         <!-- Questão 57 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="57">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="57" name="57" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Comprovo antes se as coisas funcionam realmente.
                 </label>
             </div>
         </div>
         <!-- Questão 58 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="58">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="58" name="58" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Faço vários borrões antes da redação final de um trabalho.
                 </label>
             </div>
         </div>
         <!-- Questão 59 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="59">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="59" name="59" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Sou consciente de que nas discussões ajudo a manter os outros centrados nos temas, evitando divagações.
                 </label>
             </div>
         </div>
         <!-- Questão 60 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="60">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="60" name="60" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Observo que, com frequência, sou um (a) dos (as) mais objetivos e ponderados nas discussões.
                 </label>
             </div>
         </div>
         <!-- Questão 61 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="61">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="61" name="61" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Quando algo vai mal, não dou importância e trato de fazê-lo melhor.
                 </label>
             </div>
         </div>
         <!-- Questão 62 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="62">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="62" name="62" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Desconsidero as ideias originais e espontâneas se não as percebo práticas.
                 </label>
             </div>
         </div>
         <!-- Questão 63 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="63">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="63" name="63" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Gosto de analisar diversas alternativas antes de tomar uma decisão.
                 </label>
             </div>
         </div>
         <!-- Questão 64 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="64">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="64" name="64" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Com frequência, olho adiante para prever o futuro.
                 </label>
             </div>
         </div>
         <!-- Questão 65 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="65">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="65" name="65" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Nos debates e discussões prefiro desempenhar um papel secundário do que ser o (a) líder ou o (a) que mais participa.
                 </label>
             </div>
         </div>
         <!-- Questão 66 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="66">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="66" name="66" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Me incomodam as pessoas que não atuam com lógica.
                 </label>
             </div>
         </div>
         <!-- Questão 67 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="67">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="67" name="67" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Me incomoda ter que planejar e prever as coisas.
                 </label>
             </div>
         </div>
         <!-- Questão 68 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="68">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="68" name="68" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Creio que o fim justifica os meios em muitos casos.
                 </label>
             </div>
         </div>
         <!-- Questão 69 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="69">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="69" name="69" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Costumo refletir sobre os assuntos e problemas.
                 </label>
             </div>
         </div>
         <!-- Questão 70 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="70">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="70" name="70" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     O trabalho consciente me traz satisfação e orgulho.
                 </label>
             </div>
         </div>
         <!-- Questão 71 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="71">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="71" name="71" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Diante dos acontecimentos trato de descobrir os princípios e teorias em que se baseiam.
                 </label>
             </div>
         </div>
         <!-- Questão 72 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="72">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="72" name="72" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Com o intuito de conseguir o objetivo que pretendo, sou capaz de ferir sentimentos alheios.
                 </label>
             </div>
         </div>
         <!-- Questão 73 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="73">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="73" name="73" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Não me importa fazer todo o necessário para que o meu trabalho seja efetivado.
                 </label>
             </div>
         </div>
         <!-- Questão 74 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="74">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="74" name="74" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Com frequência, sou uma das pessoas que mais anima as festas.
                 </label>
             </div>
         </div>
         <!-- Questão 75 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="75">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="75" name="75" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Me aborreço, frequentemente, com o trabalho metódico e minucioso.
                 </label>
             </div>
         </div>
         <!-- Questão 76 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="76">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="76" name="76" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     As pessoas, com frequência, creem que sou pouco sensível a seus sentimentos.
                 </label>
             </div>
         </div>
         <!-- Questão 77 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="77">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="77" name="77" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Costumo deixar-me levar por minhas intuições.
                 </label>
             </div>
         </div>
         <!-- Questão 78 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="78">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="78" name="78" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Nos trabalhos de grupo, procuro que se siga um método e uma ordem.
                 </label>
             </div>
         </div>
         <!-- Questão 79 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="79">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="79" name="79" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Com frequência, me interessa saber o que as pessoas pensam.
                 </label>
             </div>
         </div>
         <!-- Questão 80 -->
-        <div class="VARKQuestion">
-            <div class="VARKResponse">
-                <label for="C16K">
-                    <input type="checkbox" class="VARKResponseCheckbox" id="C16K" name="C16K" value="K" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="sw_vark_option_clicked( this );">
+        <div class="CHAEAQuestion">
+            <div class="CHAEAResponse">
+                <label for="80">
+                    <input type="checkbox" class="VARKResponseCheckbox" id="80" name="80" value="T" title="Assistindo a um vídeo de uma pessoa montando uma mesa similar." onclick="collectResponses( this );">
                     Evito os temas subjetivos, ambíguos e pouco claros.
                 </label>
             </div>
         </div>
     </div>
-    <div class="container">
-      <p>
-        <input type="hidden" name="submitted" id="submitted" value="true">
-        <a class="btn btn-xs btn-primary">Enviar</a>
-      </p>
+    <div class="container correction">
+        <p class="correction">
+            <input type="hidden" name="submitted" id="submitted" value="True">
+            <a class="btn btn-xs btn-primary" onclick="sendResult()">Enviar</a>
+        </p>
+        <p class="correction-2" id="empty-form"></p>
     </div>
     </form>
   </div>
@@ -816,10 +812,7 @@
 <!-- footer -->
 <footer class="bg-dark footer-section">
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
-        var CurrentYear = new Date().getFullYear()
-        document.write(CurrentYear)
-      </script> Designed &amp; Developed by <a class="text-white-50" href="https://themefisher.com/">Themefisher</a></p>
+    <p class="mb-0 text-light"></p>
   </div>
 </footer>
 <!-- /footer -->
@@ -835,6 +828,7 @@
 
 <!-- Main Script -->
 <script src="js/script.js"></script>
-
+<script src="js/collectDataChaea.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 </body>
 </html>

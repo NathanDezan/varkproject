@@ -3,6 +3,7 @@ var app = express();
 const path = require('path');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
+
 app.use(express.static(path.join(__dirname, '..', '/front')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -899,3 +899,15 @@ button[name="drop"]{
   display: inline-block;
   margin-left: 1em;
 }
+
+.info-container{
+  display: inline-block;
+}
+
+.space-checkbox{
+  padding-right: 10px;
+}
+
+.space-input{
+  padding-left: 10px;
+}

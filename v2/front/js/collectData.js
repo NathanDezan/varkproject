@@ -8,9 +8,11 @@ var responses = {
 13:{C13K: false, C13A: false, C13R: false, C13V: false}, 14: {C14K: false, C14R: false, C14A: false, C14V: false},
 15:{C15K: false, C15A: false, C15R: false, C15V: false}, 16: {C16V: false, C16A: false, C16R: false, C16K: false}};
 
-var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: ""};
+var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: []};
 
 var countVARK = {V: 0, A: 0, R: 0, K: 0};
+
+var functionGroup = {G: false, A: false, P: false, T: false};
 
 function collectResponses(component){
     var nameObject = component.getAttribute("name");
@@ -334,6 +336,48 @@ function awaitResult(){
     element.textContent = "Aguarde um momento!";
 }
 
+function collectPersonalInformation(){
+    var personalName = document.getElementById("name").value;
+    var personalRGA = document.getElementById("rga").value;
+    var personalEmail = document.getElementById("email").value;
+    var personalAge = document.getElementById("age").value;
+
+    var selectGen = document.getElementById('gen');
+    var optionGen = selectGen.options[selectGen.selectedIndex];
+
+    var selectMateria= document.getElementById('materia');
+    var optionMateria = selectMateria.options[selectMateria.selectedIndex];
+
+    
+
+    informationForm.Name = personalName;
+    informationForm.RGA = personalRGA;
+    informationForm.Email = personalEmail;
+    informationForm.Age = personalAge;
+    informationForm.Gender = optionGen.value;
+    informationForm.Class = optionMateria.value;
+
+    if(functionGroup.G == true){
+        informationForm.Function.push("Gerente de Projetos");
+    }
+    if(functionGroup.A == true){
+        informationForm.Function.push("Analista de Sistema");  
+    }
+    if(functionGroup.P == true){
+        informationForm.Function.push("Programador");  
+    }
+    if(functionGroup.T == true){
+        informationForm.Function.push("Testador");  
+    }
+}
+
+function groupGAPT(component){
+    var nameObject = component.getAttribute("name");
+    var nameString = String(nameObject);
+    
+    functionGroup[nameString] = !functionGroup[nameString];
+}
+
 function calcuteResult(resp){
 
     for(var item in resp){
@@ -354,8 +398,9 @@ function calcuteResult(resp){
         }
     }
     console.log(countVARK);
-
-    var contentVARK = {Information: informationForm, Responses: responses, Result: countVARK};
+    collectPersonalInformation();
+    
+    var contentVARK = {Quiz: "Vark", Information: informationForm, Responses: responses, Result: countVARK};
     axios.post('/result', contentVARK).then((response) => {
         setTimeout(redirectResult, 2000);
     }).catch((error) => {
@@ -377,7 +422,7 @@ function typeLearning(){
             bigValue = countVARK[item];
             letterValue = item;
         }
-        if(countVARK[item] == bigValue){
+        if(countVARK[item] == bigValue && countVARK[item] != 0){
             triggerMulti = true;
         }
     }
