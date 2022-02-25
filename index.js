@@ -3,8 +3,7 @@ var app = express();
 const path = require('path');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-
-app.use(express.static(path.join(__dirname, '..', '/front')));
+app.use('/', express.static(path.join(__dirname, '/front/')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,11 +11,7 @@ app.listen(process.env.PORT || 8080, () => {
     console.log("Application listening on port 8080...");
 });
 
-// app.get('/', function(req, res) {
-//     res.sendFile(path.join(__dirname, '../front/index.html'));
-// });
-
-app.post('/result', function(req, res) {
+app.post('/result', process.env.HOST, function(req, res) {
     res.sendFile(path.join(__dirname, '../front/result.html'));
     console.log(req.body);
     bdConnect(req.body);
