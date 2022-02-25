@@ -421,8 +421,7 @@ function typeLearning(){
         if(countVARK[item] > bigValue){
             bigValue = countVARK[item];
             letterValue = item;
-        }
-        if(countVARK[item] == bigValue && countVARK[item] != 0){
+        }else if(countVARK[item] == bigValue && countVARK[item] != 0 && bigValue != 0){
             triggerMulti = true;
         }
     }
@@ -439,7 +438,6 @@ function typeLearning(){
         kinesteticVARK();
     }
 }
-
 
 function visualVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Visual!</h3></div>" +
