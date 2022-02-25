@@ -441,7 +441,7 @@ function typeLearning(){
 
 function visualVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Visual!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -449,7 +449,7 @@ function visualVARK(){
 
 function auralVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Auditivo!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -457,7 +457,7 @@ function auralVARK(){
 
 function readwriteVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é de Leitura/Escrita!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -465,7 +465,7 @@ function readwriteVARK(){
 
 function kinesteticVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Cinestésica!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -473,7 +473,7 @@ function kinesteticVARK(){
 
 function multimodalVARK(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Multimodal!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=vark.html>VARK</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
