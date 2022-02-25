@@ -171,7 +171,7 @@ function typeLearning(){
 
 function activeCHAEA(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Ativo!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -179,7 +179,7 @@ function activeCHAEA(){
 
 function reflexiveCHAEA(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Reflexivo!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -187,7 +187,7 @@ function reflexiveCHAEA(){
 
 function teoricCHAEA(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Teórico</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;
@@ -195,7 +195,7 @@ function teoricCHAEA(){
 
 function pragmaticCHAEA(){
     var string = "<div class=container><h3 class=card-title>Seu tipo de aprendizado é Pragmático!</h3></div>" +
-    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br>" +
+    "<div class=container><h5 class=card-title>Para melhor entendimento acesse a aba <a href=chaea.html>CHAEA</a> no menu e verifique as melhores estratégias para aprendizado!<br><br><br><br><br><br><br><br><br><br><br><br>" +
     "</h5></div>";
 
     document.getElementById("div-external").innerHTML = string;

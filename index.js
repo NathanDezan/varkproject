@@ -13,7 +13,7 @@ app.listen(process.env.PORT || 8080, () => {
 });
 
 app.post('/result', function(req, res) {
-    res.sendFile(path.join(__dirname, './front/result.html'));
+    //res.sendFile(path.join(__dirname, './front/result.html'));
     //console.log(req.body);
     bdConnect(req.body);
 });
