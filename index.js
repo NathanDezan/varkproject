@@ -11,7 +11,7 @@ app.listen(process.env.PORT || 8080, () => {
     console.log("Application listening on port 8080...");
 });
 
-app.post('/result', process.env.HOST, function(req, res) {
+app.post('/result', function(req, res) {
     res.sendFile(path.join(__dirname, './front/result.html'));
     console.log(req.body);
     bdConnect(req.body);
