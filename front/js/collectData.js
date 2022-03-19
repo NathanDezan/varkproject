@@ -8,7 +8,7 @@ var responses = {
 13:{C13K: false, C13A: false, C13R: false, C13V: false}, 14: {C14K: false, C14R: false, C14A: false, C14V: false},
 15:{C15K: false, C15A: false, C15R: false, C15V: false}, 16: {C16V: false, C16A: false, C16R: false, C16K: false}};
 
-var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: [], Style: ""};
+var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: []};
 
 var countVARK = {V: 0, A: 0, R: 0, K: 0};
 
@@ -369,8 +369,6 @@ function collectPersonalInformation(){
     if(functionGroup.T == true){
         informationForm.Function.push("Testador");  
     }
-
-    letterBig()
 }
 
 function groupGAPT(component){
@@ -438,33 +436,6 @@ function typeLearning(){
         readwriteVARK();
     }else if(letterValue == "K"){
         kinesteticVARK();
-    }
-}
-
-function letterBig(){
-    var bigValue = -1;
-    var letterValue = "";
-    var triggerMulti = false;
-
-    for(var item in countVARK){
-        if(countVARK[item] > bigValue){
-            bigValue = countVARK[item];
-            letterValue = item;
-        }else if(countVARK[item] == bigValue && countVARK[item] != 0 && bigValue != 0){
-            triggerMulti = true;
-        }
-    }
-
-    if(triggerMulti == true){
-        informationForm.Style = "Multimodal"
-    }else if(letterValue == "V"){
-        informationForm.Style = "Visual"
-    }else if(letterValue == "A"){
-        informationForm.Style = "Aural"
-    }else if(letterValue == "R"){
-        informationForm.Style = "Leitura/Escrita"
-    }else if(letterValue == "K"){
-        informationForm.Style = "Cinestésico"
     }
 }
 
