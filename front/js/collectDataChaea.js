@@ -16,7 +16,7 @@ var responses = {
     71: false, 72: false, 73: false, 74: false, 75: false,
     76: false, 77: false, 78: false, 79: false, 80: false}
 
-var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: []};
+var informationForm = {Name: "", Age: "", Gender: "", RGA: "", Email: "", Class: "", Function: [], Style: ""};
 
 var countCHAEA = {A: 0, R: 0, T: 0, P: 0};
 
@@ -65,7 +65,7 @@ function collectPersonalInformation(){
     informationForm.Age = personalAge;
     informationForm.Gender = optionGen.value;
     informationForm.Class = optionMateria.value;
-
+    
     if(functionGroup.G == true){
         informationForm.Function.push("Gerente de Projetos");
     }
@@ -78,6 +78,8 @@ function collectPersonalInformation(){
     if(functionGroup.T == true){
         informationForm.Function.push("Testador");  
     }
+
+    letterBig()
 }
 
 function groupGAPT(component){
@@ -159,6 +161,7 @@ function typeLearning(){
     }
 
     if(letterValue == "A"){
+
         activeCHAEA();
     }else if(letterValue == "R"){
         reflexiveCHAEA();
@@ -166,6 +169,32 @@ function typeLearning(){
         teoricCHAEA();
     }else if(letterValue == "P"){
         pragmaticCHAEA();
+    }
+}
+
+function letterBig(){
+    var bigValue = -1;
+    var letterValue = "";
+    var triggerMulti = false;
+
+    for(var item in countCHAEA){
+        if(countCHAEA[item] > bigValue){
+            bigValue = countCHAEA[item];
+            letterValue = item;
+        }
+        if(countCHAEA[item] == bigValue){
+            triggerMulti = true;
+        }
+    }
+
+    if(letterValue == "A"){
+        informationForm.Style = "Ativo"
+    }else if(letterValue == "R"){
+        informationForm.Style = "Reflexivo"
+    }else if(letterValue == "T"){
+        informationForm.Style = "Teórico"
+    }else if(letterValue == "P"){
+        informationForm.Style = "Pragmático"
     }
 }
 
